@@ -1,0 +1,21 @@
+sudo apt-get update
+sudo apt-get install python-rosdep
+sudo rosdep init
+rosdep update
+rosdep install --from-paths ${ROS_WORKSPACE} --ignore-src --rosdistro=${ROSDISTRO}
+
+sudo apt-get install geographiclib-tools
+sudo apt-get install libgeographic-dev
+
+
+sudo geographiclib-get-geoids egm96-5
+
+
+cd /path/to/mavros/scripts
+./install_geographiclib_datasets.sh
+
+
+rosdep update
+rosdep install --from-paths ${ROS_WORKSPACE} --ignore-src --rosdistro=${ROSDISTRO}
+
+
