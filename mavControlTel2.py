@@ -9,7 +9,7 @@ async def send_proof_of_life(drone):
 	while True:
 		print("Sending proof of life signal")
 		# Replace this with an actual "proof of life" command if available
-		await drone.offboard.set_actuator_control(ActuatorControl([0.0] * 8))
+		await drone.offboard.set_actuator_control(ActuatorControl([0] * 8))
 		await asyncio.sleep(1 / PROOF_OF_LIFE_HZ)
 
 async def request_sensor_data(drone):
