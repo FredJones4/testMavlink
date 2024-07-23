@@ -18,12 +18,12 @@ async def request_sensor_data(drone):
 		await asyncio.sleep(1)  # Adjust as needed
 
 async def send_commands(drone):
-	throttle = 0.0
-	roll = 0.0
-	pitch = 0.0
-	yaw = 0.0
+	throttle = 1
+	roll = -1
+	pitch = 1
+	yaw = -1
 
-	increment = 0.1
+	increment = 0 # was 0.1
 	
 	while True:
 		try:
@@ -34,11 +34,11 @@ async def send_commands(drone):
 					throttle,   # Channel 1, RC_MAP_THROTTLE
 					roll,  		# Channel 2, RC_MAP_ROLL
 					pitch,		# Channel 3, RC_MAP_PITCH
-					yaw,		# Channel 4, RC_MAP_YAW
-					0.0,		# Channel 5 -- auxillary
-					0.0, 		# Channel 6 -- auxillary, RC_MAP_FLTMODE
-					1.0, 		# Channel 7 -- auxillary, RC_MAP_OFFB_SW
-					0.0			# Channel 8 -- auxillary, 
+					yaw		# Channel 4, RC_MAP_YAW
+					# 0.0,		# Channel 5 -- auxillary
+					# 0.0, 		# Channel 6 -- auxillary, RC_MAP_FLTMODE
+					# 1.0, 		# Channel 7 -- auxillary, RC_MAP_OFFB_SW
+					# 0.0			# Channel 8 -- auxillary, 
 				])
 			)
 			
@@ -47,10 +47,10 @@ async def send_commands(drone):
 			pitch += increment
 			yaw += increment
 			
-			if roll > 1.0 or throttle > 1.0: #TODO: modify for testing individual channels
-				increment = -0.1
+			if roll > 1 or throttle > 1: # was 1.0 #TODO: modify for testing individual channels
+				increment = 0#-0.1
 			elif roll < 0.0 or throttle < 0.0:
-				increment = 0.1
+				increment = 0#0.1
 			
 			await asyncio.sleep(1)  # Adjust as needed
 		except OffboardError as error:
