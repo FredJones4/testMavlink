@@ -17,7 +17,7 @@ async def request_sensor_data(drone):
 		print(f"Health: {health}")
 		await asyncio.sleep(1)  # Adjust as needed
 
-async def send_thrust_and_throttle(drone):
+async def send_commands(drone):
 	throttle = 0.0
 	roll = 0.0
 	pitch = 0.0
@@ -28,7 +28,7 @@ async def send_thrust_and_throttle(drone):
 	while True:
 		try:
 			# Thrust and throttle values (varying from 0 to 1)
-			print(f"Sending thrust: {thrust}, throttle: {throttle}")
+			print(f"Sending throttle: {throttle}, roll: {roll}, pitch: {pitch}, yaw: {yaw}")
 			await drone.offboard.set_actuator_control(
 				ActuatorControl([
 					throttle,   # Channel 1, RC_MAP_THROTTLE
@@ -42,12 +42,14 @@ async def send_thrust_and_throttle(drone):
 				])
 			)
 			
-			thrust += increment
+			roll += increment
 			throttle += increment
+			pitch += increment
+			yaw += increment
 			
-			if thrust > 1.0 or throttle > 1.0: #TODO: modify for testing individual channels
+			if roll > 1.0 or throttle > 1.0: #TODO: modify for testing individual channels
 				increment = -0.1
-			elif thrust < 0.0 or throttle < 0.0:
+			elif roll < 0.0 or throttle < 0.0:
 				increment = 0.1
 			
 			await asyncio.sleep(1)  # Adjust as needed
@@ -69,9 +71,12 @@ async def run():
 			print("Drone connected!")
 			break
 
+	# 	    # Start offboard mode
+    # await drone.offboard.start()
+
 	control_task = asyncio.ensure_future(send_proof_of_life(drone))
 	sensor_task = asyncio.ensure_future(request_sensor_data(drone))
-	thrust_task = asyncio.ensure_future(send_thrust_and_throttle(drone))
+	thrust_task = asyncio.ensure_future(send_commands(drone))
 
 	await asyncio.gather(control_task, sensor_task, thrust_task)
 
