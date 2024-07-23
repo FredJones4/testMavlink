@@ -18,8 +18,11 @@ async def request_sensor_data(drone):
 		await asyncio.sleep(1)  # Adjust as needed
 
 async def send_thrust_and_throttle(drone):
-	thrust = 0.0
 	throttle = 0.0
+	roll = 0.0
+	pitch = 0.0
+	yaw = 0.0
+
 	increment = 0.1
 	
 	while True:
@@ -28,16 +31,21 @@ async def send_thrust_and_throttle(drone):
 			print(f"Sending thrust: {thrust}, throttle: {throttle}")
 			await drone.offboard.set_actuator_control(
 				ActuatorControl([
-					thrust,    # Thrust
-					throttle,  # Throttle
-					0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+					throttle,   # Channel 1, RC_MAP_THROTTLE
+					roll,  		# Channel 2, RC_MAP_ROLL
+					pitch,		# Channel 3, RC_MAP_PITCH
+					yaw,		# Channel 4, RC_MAP_YAW
+					0.0,		# Channel 5 -- auxillary
+					0.0, 		# Channel 6 -- auxillary, RC_MAP_FLTMODE
+					1.0, 		# Channel 7 -- auxillary, RC_MAP_OFFB_SW
+					0.0			# Channel 8 -- auxillary, 
 				])
 			)
 			
 			thrust += increment
 			throttle += increment
 			
-			if thrust > 1.0 or throttle > 1.0:
+			if thrust > 1.0 or throttle > 1.0: #TODO: modify for testing individual channels
 				increment = -0.1
 			elif thrust < 0.0 or throttle < 0.0:
 				increment = 0.1
