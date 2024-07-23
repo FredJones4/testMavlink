@@ -1,6 +1,6 @@
 import asyncio
 from mavsdk import System
-from mavsdk import (OffboardError, PositionNedYaw)
+from mavsdk.offboard import OffboardError, PositionNedYaw
 
 async def send_control_commands(drone):
 	while True:
@@ -10,7 +10,7 @@ async def send_control_commands(drone):
 			await drone.offboard.set_position_ned(PositionNedYaw(0.0, 0.0, -1.0, 0.0))
 			await asyncio.sleep(1)  # Adjust as needed
 		except OffboardError as error:
-			print(f"Error: {error._result.result}")
+			print(f"Error: {error}")
 			await asyncio.sleep(1)  # Wait before retrying
 		except Exception as e:
 			print(f"Unexpected error: {e}")
@@ -44,7 +44,7 @@ async def run():
 	try:
 		await drone.offboard.start()
 	except OffboardError as error:
-		print(f"Starting offboard mode failed with error code: {error._result.result}")
+		print(f"Starting offboard mode failed with error code: {error}")
 		print("-- Disarming")
 		await drone.action.disarm()
 		return
