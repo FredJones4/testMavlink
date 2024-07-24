@@ -3,6 +3,8 @@
 
 # For information on how to send commands, go to action http://mavsdk-python-docs.s3-website.eu-central-1.amazonaws.com/plugins/action.html#mavsdk.action.Action.set_actuator
 
+
+# for allowing position, take outside: https://github.com/mavlink/MAVSDK-Python/issues/176 
 import asyncio
 from mavsdk import System
 from mavsdk.offboard import OffboardError
