@@ -1,0 +1,3 @@
+Health: Health: [is_gyrometer_calibration_ok: True, is_accelerometer_calibration_ok: True, is_magnetometer_calibration_ok: False, is_local_position_ok: False, is_global_position_ok: False, is_home_position_ok: False, is_armable: False]
+Sending proof of life signal
+Sending proof of life signal
