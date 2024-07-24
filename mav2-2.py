@@ -117,8 +117,8 @@ async def run():
 
     asyncio.sleep(1)
 
-    print("-- Arming")
-    await drone.action.arm()
+    # print("-- Arming")
+    # await drone.action.arm()
 
     print("-- Setting initial setpoint")
     await drone.offboard.set_position_ned(PositionNedYaw(0.0, 0.0, 0.0, 0.0))
@@ -129,9 +129,9 @@ async def run():
         print("Offboard mode started successfully.")
     except OffboardError as e:
         print(f"Failed to start offboard mode: {e}")
-        print("-- Disarming")
-        await drone.action.disarm()
-        return
+        # print("-- Disarming")
+        # await drone.action.disarm()
+        # return
 
     print("-- Go 0m North, 0m East, -5m Down within local coordinate system")
     await drone.offboard.set_position_ned(PositionNedYaw(0.0, 0.0, -5.0, 0.0))
