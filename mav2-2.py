@@ -112,12 +112,14 @@ async def run():
         if state.is_connected:
             print("Drone connected!")
             break
-    
+    asyncio.sleep(1)
     print("Waiting for drone to have a global position estimate...")
     async for health in drone.telemetry.health():
         if health.is_global_position_ok and health.is_home_position_ok:
             print("-- Global position estimate OK")
             break
+    
+    
 
     print("-- Arming")
     await drone.action.arm()
