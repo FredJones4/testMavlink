@@ -1,6 +1,6 @@
 import asyncio
 from mavsdk import System
-from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup
+from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup, PositionNedYaw, 
 
 # Define the rate at which the functions will run (200 Hz)
 RATE_HZ = 200
@@ -107,6 +107,18 @@ async def run():
         if state.is_connected:
             print("Drone connected!")
             break
+    
+    print("Waiting for drone to have a global position estimate...")
+    async for health in drone.telemetry.health():
+        if health.is_global_position_ok and health.is_home_position_ok:
+            print("-- Global position estimate OK")
+            break
+
+    print("-- Arming")
+    await drone.action.arm()
+
+    print("-- Setting initial setpoint")
+    await drone.offboard.set_position_ned(PositionNedYaw(0.0, 0.0, 0.0, 0.0))
 
     print("Starting offboard mode...")
     try:
@@ -114,6 +126,9 @@ async def run():
         print("Offboard mode started successfully.")
     except OffboardError as e:
         print(f"Failed to start offboard mode: {e}")
+        print("-- Disarming")
+        await drone.action.disarm()
+        return
 
     print("Starting tasks...")
     thrust_task = asyncio.ensure_future(send_commands(drone))
