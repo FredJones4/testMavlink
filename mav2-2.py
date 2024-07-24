@@ -55,7 +55,7 @@ async def send_commands(drone):
             print(f"Unexpected error: {e}")
             await asyncio.sleep(1)
 
-async def request_sensor_data(drone):
+async def request_telemetry_data(drone):
     print("Requesting sensor data continuously...")
     while True:
         print("Requesting telemetry data...")
@@ -97,6 +97,11 @@ async def request_sensor_data(drone):
 
         await asyncio.sleep(1 / RATE_HZ)  # Run at 200 Hz
 
+async def request_health_data(drone):
+    async for health in drone.telemetry.health():
+        print(f"Health: {health}")
+        await asyncio.sleep(1)  # Adjust as needed
+
 async def run():
     drone = System()
     # Connect to the Pixhawk via telemetry radio on /dev/ttyUSB0
@@ -129,12 +134,20 @@ async def run():
         print("-- Disarming")
         await drone.action.disarm()
         return
+    
+    print("-- Go 0m North, 0m East, -5m Down \
+            within local coordinate system")
+    await drone.offboard.set_position_ned(
+            PositionNedYaw(0.0, 0.0, -5.0, 0.0))
+    await asyncio.sleep(10)
 
     print("Starting tasks...")
     thrust_task = asyncio.ensure_future(send_commands(drone))
-    sensor_task = asyncio.ensure_future(request_sensor_data(drone))
+    health_task = asyncio.ensure_future(request_health_data(drone))
+    telemetry_task = asyncio.ensure_future(request_telemetry_data(drone))
+    await asyncio.gather(thrust_task, health_task, telemetry_task)
 
-    await asyncio.gather(thrust_task, sensor_task)
+    
 
 if __name__ == "__main__":
     asyncio.run(run())
