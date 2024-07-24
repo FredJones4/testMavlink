@@ -2,22 +2,6 @@ import asyncio
 from mavsdk import System
 from mavsdk.offboard import OffboardError
 
-# Macro for proof of life frequency (Hz)
-PROOF_OF_LIFE_HZ = 2.5
-
-async def send_proof_of_life(drone):
-    while True:
-        print("Sending proof of life signal")
-        # Set all actuators to 0 as a proof of life signal
-        for i in range(1, 9):
-            await drone.action.set_actuator(i, 0.0)
-        await asyncio.sleep(1 / PROOF_OF_LIFE_HZ)
-
-async def request_sensor_data(drone):
-    async for health in drone.telemetry.health():
-        print(f"Health: {health}")
-        await asyncio.sleep(1)  # Adjust as needed
-
 async def send_commands(drone):
     throttle = 0.0
     roll = -1.0
@@ -104,13 +88,11 @@ async def run():
         print(f"Failed to start offboard mode: {e}")
 
     print("Starting tasks...")
-    control_task = asyncio.ensure_future(send_proof_of_life(drone))
-    sensor_task = asyncio.ensure_future(request_sensor_data(drone))
     thrust_task = asyncio.ensure_future(send_commands(drone))
     telemetry_task = asyncio.ensure_future(request_telemetry_data(drone))
     accelerometer_task = asyncio.ensure_future(request_accelerometer_data(drone))
 
-    await asyncio.gather(control_task, sensor_task, thrust_task, telemetry_task, accelerometer_task)
+    await asyncio.gather(thrust_task, telemetry_task, accelerometer_task)
 
 if __name__ == "__main__":
     asyncio.run(run())
