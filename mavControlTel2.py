@@ -1,6 +1,6 @@
 import asyncio
 from mavsdk import System
-from mavsdk.offboard import OffboardError, ActuatorControl
+from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup
 
 # Macro for proof of life frequency (Hz)
 PROOF_OF_LIFE_HZ = 2.5
@@ -30,17 +30,20 @@ async def send_commands(drone):
 			# Thrust and throttle values (varying from 0 to 1)
 			print(f"Sending throttle: {throttle}, roll: {roll}, pitch: {pitch}, yaw: {yaw}")
 			await drone.offboard.set_actuator_control(
-				ActuatorControl([
-					throttle,   # Channel 1, RC_MAP_THROTTLE
-					roll,  		# Channel 2, RC_MAP_ROLL
-					pitch,		# Channel 3, RC_MAP_PITCH
-					yaw		# Channel 4, RC_MAP_YAW
-					# 0.0,		# Channel 5 -- auxillary
-					# 0.0, 		# Channel 6 -- auxillary, RC_MAP_FLTMODE
-					# 1.0, 		# Channel 7 -- auxillary, RC_MAP_OFFB_SW
-					# 0.0			# Channel 8 -- auxillary, 
-				])
-			)
+                ActuatorControl(
+                    [ActuatorControlGroup(
+                        [
+                            throttle,  # Channel 1, RC_MAP_THROTTLE
+                            roll,      # Channel 2, RC_MAP_ROLL
+                            pitch,     # Channel 3, RC_MAP_PITCH
+                            yaw,       # Channel 4, RC_MAP_YAW
+                            0.0,       # Channel 5 -- auxiliary
+                            0.0,       # Channel 6 -- auxiliary, RC_MAP_FLTMODE
+                            1.0,       # Channel 7 -- auxiliary, RC_MAP_OFFB_SW
+                            0.0        # Channel 8 -- auxiliary
+                        ]),
+                                                
+                    ActuatorControlGroup([0,0,0,0,0,0,0,0])]))
 			
 			roll += increment
 			throttle += increment
