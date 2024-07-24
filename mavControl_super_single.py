@@ -1,6 +1,6 @@
 import time
 from mavsdk import System
-from mavsdk.offboard import OffboardError, ActuatorControl
+from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup
 
 # Function to send proof of life signal
 def send_proof_of_life(drone):
@@ -31,17 +31,20 @@ def send_commands(drone):
     try:
         print(f"Sending throttle: {throttle}, roll: {roll}, pitch: {pitch}, yaw: {yaw}")
         drone.offboard.set_actuator_control(
-            ActuatorControl([
-                throttle,  # Channel 1, RC_MAP_THROTTLE
-                roll,      # Channel 2, RC_MAP_ROLL
-                pitch,     # Channel 3, RC_MAP_PITCH
-                yaw,       # Channel 4, RC_MAP_YAW
-                0.0,       # Channel 5 -- auxiliary
-                0.0,       # Channel 6 -- auxiliary, RC_MAP_FLTMODE
-                1.0,       # Channel 7 -- auxiliary, RC_MAP_OFFB_SW
-                0.0        # Channel 8 -- auxiliary
-            ])
-        )
+                ActuatorControl(
+                    [ActuatorControlGroup(
+                        [
+                            throttle,  # Channel 1, RC_MAP_THROTTLE
+                            roll,      # Channel 2, RC_MAP_ROLL
+                            pitch,     # Channel 3, RC_MAP_PITCH
+                            yaw,       # Channel 4, RC_MAP_YAW
+                            0.0,       # Channel 5 -- auxiliary
+                            0.0,       # Channel 6 -- auxiliary, RC_MAP_FLTMODE
+                            1.0,       # Channel 7 -- auxiliary, RC_MAP_OFFB_SW
+                            0.0        # Channel 8 -- auxiliary
+                        ]),
+                                                
+                    ActuatorControlGroup([0,0,0,0,0,0,0,0])]))
     except OffboardError as error:
         print(f"Offboard error: {error}")
     except Exception as e:
@@ -70,7 +73,7 @@ def run():
 
     send_proof_of_life(drone)
     send_commands(drone)
-    request_sensor_data(drone)
+    # request_sensor_data(drone)
 
     # Stop offboard mode
     try:
