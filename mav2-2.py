@@ -50,77 +50,77 @@ async def send_commands(drone):
             await asyncio.sleep(1)
 
 async def request_acceleration_frd(drone):
-    async for acceleration in drone.telemetry.acceleration_frd():
+    async for acceleration in drone.telemetry.AccelerationFrd():
         print(f"AccelerationFrd: {acceleration}")
         await asyncio.sleep(1)
 
 async def request_actuator_control_target(drone):
-    async for target in drone.telemetry.actuator_control_target():
+    async for target in drone.telemetry.ActuatorControlTarget():
         print(f"ActuatorControlTarget: {target}")
         await asyncio.sleep(1)
 
 async def request_actuator_output_status(drone):
-    async for status in drone.telemetry.actuator_output_status():
+    async for status in drone.telemetry.ActuatorOutputStatus():
         print(f"ActuatorOutputStatus: {status}")
         await asyncio.sleep(1)
 
 async def request_angular_velocity_body(drone):
-    async for velocity in drone.telemetry.angular_velocity_body():
+    async for velocity in drone.telemetry.AngularVelocityBody():
         print(f"AngularVelocityBody: {velocity}")
         await asyncio.sleep(1)
 
 async def request_angular_velocity_frd(drone):
-    async for velocity in drone.telemetry.angular_velocity_frd():
+    async for velocity in drone.telemetry.AngularVelocityFrd():
         print(f"AngularVelocityFrd: {velocity}")
         await asyncio.sleep(1)
 
 async def request_battery(drone):
-    async for battery in drone.telemetry.battery():
+    async for battery in drone.telemetry.Battery():
         print(f"Battery: {battery}")
         await asyncio.sleep(1)
 
 async def request_euler_angle(drone):
-    async for angle in drone.telemetry.attitude_euler():
+    async for angle in drone.telemetry.EulerAngle():
         print(f"EulerAngle: {angle}")
         await asyncio.sleep(1)
 
 async def request_heading(drone):
-    async for heading in drone.telemetry.heading():
+    async for heading in drone.telemetry.Heading():
         print(f"Heading: {heading}")
         await asyncio.sleep(1)
 
 async def request_odometry(drone):
-    async for odometry in drone.telemetry.odometry():
+    async for odometry in drone.telemetry.Odometry():
         print(f"Odometry: {odometry}")
         await asyncio.sleep(1)
 
 async def request_position(drone):
-    async for position in drone.telemetry.position():
+    async for position in drone.telemetry.Position():
         print(f"Position: {position}")
         await asyncio.sleep(1)
 
 async def request_position_body(drone):
-    async for position in drone.telemetry.position_body():
+    async for position in drone.telemetry.PositionBody():
         print(f"PositionBody: {position}")
         await asyncio.sleep(1)
 
 async def request_position_ned(drone):
-    async for position in drone.telemetry.position_velocity_ned():
+    async for position in drone.telemetry.PositionVelocityNed():
         print(f"PositionNed: {position}")
         await asyncio.sleep(1)
 
 async def request_quaternion(drone):
-    async for quaternion in drone.telemetry.attitude_quaternion():
+    async for quaternion in drone.telemetry.Quaternion():
         print(f"Quaternion: {quaternion}")
         await asyncio.sleep(1)
 
 async def request_raw_gps(drone):
-    async for gps in drone.telemetry.raw_gps():
+    async for gps in drone.telemetry.RawGps():
         print(f"RawGps: {gps}")
         await asyncio.sleep(1)
 
 async def request_status_text(drone):
-    async for status_text in drone.telemetry.status_text():
+    async for status_text in drone.telemetry.StatusText():
         print(f"StatusText: {status_text}")
         await asyncio.sleep(1)
 
