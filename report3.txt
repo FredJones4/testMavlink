@@ -1,0 +1,474 @@
+ 
+[01:46:20|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:24|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:24|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:24|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:24|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:26|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:26|Warn ] sending again after 0.506136 s, retries to do: 3  (512). (mavlink_command_sender.cpp:320)
+[01:46:26|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:46:26|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:26|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:26|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:28|Info ] heartbeats timed out (system_impl.cpp:265)
+[01:46:28|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:28|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:28|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:28|Debug] Discovered 1 component(s) (system_impl.cpp:509)
+[01:46:28|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:29|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:29|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:29|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:30|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:30|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:30|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:30|Debug] MAVLink: info: Disarmed by RC (switch)	 (system_impl.cpp:243)
+[01:46:31|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:31|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:31|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:32|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:32|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:32|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:33|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:33|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:33|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:34|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:34|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:34|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:35|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:35|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:35|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:36|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:36|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:36|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:36|Debug] MAVLink: critical: Arming denied: switch to manual mode first	 (system_impl.cpp:243)
+[01:46:37|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:37|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:37|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:38|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:38|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:39|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:39|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:40|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:40|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:40|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:41|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:41|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:41|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:42|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:42|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:43|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:43|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:43|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:44|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:44|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:45|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:45|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:45|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:46|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:46|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:46|Debug] MAVLink: info: Armed by RC (switch)	 (system_impl.cpp:243)
+[01:46:47|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:47|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:47|Debug] MAVLink: info: [logger] /fs/microsd/log/2024-07-24/04_29_49.ulg	 (system_impl.cpp:243)
+[01:46:48|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:48|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:48|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:49|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:49|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:49|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:50|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:50|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:50|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:51|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:51|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:51|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:52|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:52|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:53|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:53|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:54|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:54|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:54|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:55|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:55|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:55|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:56|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:56|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:57|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:57|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:57|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:58|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:58|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:59|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:59|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:46:59|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:46:59|Debug] MAVLink: critical: Switching to OFFBOARD is currently not available	 (system_impl.cpp:243)
+[01:47:00|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:00|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:00|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:01|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:01|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:01|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:02|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:02|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:03|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:03|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:04|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:04|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:05|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:05|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:05|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:06|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:06|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:06|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:07|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:07|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:08|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:08|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:08|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:09|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:09|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:09|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:09|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:09|Debug] MAVLink: critical: Switching to OFFBOARD is currently not available	 (system_impl.cpp:243)
+[01:47:10|Warn ] sending again after 0.505563 s, retries to do: 3  (176). (mavlink_command_sender.cpp:320)
+[01:47:10|Warn ] sending again after 0.501746 s, retries to do: 3  (512). (mavlink_command_sender.cpp:320)
+[01:47:10|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:11|Warn ] sending again after 1.00903 s, retries to do: 2  (512). (mavlink_command_sender.cpp:320)
+[01:47:11|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:11|Warn ] sending again after 1.51466 s, retries to do: 1  (512). (mavlink_command_sender.cpp:320)
+[01:47:11|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:12|Info ] heartbeats timed out (system_impl.cpp:265)
+[01:47:12|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:12|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:12|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:12|Error] Retrying failed (512) (mavlink_command_sender.cpp:346)
+[01:47:17|Debug] Component Unsupported component (45) added. (system_impl.cpp:366)
+[01:47:17|Debug] Discovered 1 component(s) (system_impl.cpp:509)
+[01:47:17|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:17|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:17|Warn ] sending again after 0.504474 s, retries to do: 3  (520). (mavlink_command_sender.cpp:320)
+[01:47:17|Warn ] sending again after 0.504668 s, retries to do: 3  (511). (mavlink_command_sender.cpp:320)
+[01:47:17|Warn ] sending again after 0.504774 s, retries to do: 3  (512). (mavlink_command_sender.cpp:320)
+[01:47:17|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:18|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:18|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:18|Warn ] sending again after 1.01075 s, retries to do: 2  (520). (mavlink_command_sender.cpp:320)
+[01:47:18|Warn ] sending again after 1.01092 s, retries to do: 2  (511). (mavlink_command_sender.cpp:320)
+[01:47:18|Warn ] sending again after 1.01103 s, retries to do: 2  (512). (mavlink_command_sender.cpp:320)
+[01:47:18|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:18|Warn ] sending again after 1.5169 s, retries to do: 1  (520). (mavlink_command_sender.cpp:320)
+[01:47:18|Warn ] sending again after 1.5171 s, retries to do: 1  (511). (mavlink_command_sender.cpp:320)
+[01:47:18|Warn ] sending again after 1.51722 s, retries to do: 1  (512). (mavlink_command_sender.cpp:320)
+[01:47:18|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:19|Error] Retrying failed (520) (mavlink_command_sender.cpp:346)
+[01:47:19|Warn ] sending again after 0.505783 s, retries to do: 3  (512). (mavlink_command_sender.cpp:320)
+[01:47:19|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:20|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:20|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:20|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:20|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:20|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:20|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:20|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:21|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:21|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:21|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:21|Warn ] sending again after 0.506164 s, retries to do: 3  (512). (mavlink_command_sender.cpp:320)
+[01:47:21|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:21|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:21|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:22|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:22|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:22|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:22|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:23|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:23|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:23|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:23|Warn ] sending again after 0.506234 s, retries to do: 3  (512). (mavlink_command_sender.cpp:320)
+[01:47:23|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:23|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:23|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:24|Warn ] sending again after 1.01273 s, retries to do: 2  (512). (mavlink_command_sender.cpp:320)
+[01:47:24|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:24|Warn ] Received ack for not-existing command: 520! Ignoring... (mavlink_command_sender.cpp:288)
+[01:47:24|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:24|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:24|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:24|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:25|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:25|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:25|Warn ] sending again after 0.50611 s, retries to do: 3  (512). (mavlink_command_sender.cpp:320)
+[01:47:25|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:25|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:25|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:26|Info ] heartbeats timed out (system_impl.cpp:265)
+[01:47:26|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:26|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:26|Warn ] sending again after 1.01285 s, retries to do: 2  (512). (mavlink_command_sender.cpp:320)
+[01:47:26|Warn ] Request was for msg ID: 242 (mavlink_command_sender.cpp:326)
+[01:47:27|Debug] Discovered 1 component(s) (system_impl.cpp:509)
+[01:47:27|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:27|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:28|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:28|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:29|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:29|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+[01:47:30|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:30|Warn ] User callback queue too slow.
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:794)
+[01:47:30|Error] User callback queue overflown
+See: https://mavsdk.mavlink.io/main/en/cpp/troubleshooting.html#user_callbacks (mavsdk_impl.cpp:799)
+^C
+christian@christian-desktop:~$ 
