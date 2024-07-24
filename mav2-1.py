@@ -1,3 +1,8 @@
+# This is proof that signals are being sent and received. See documentation at telemetry for more http://mavsdk-python-docs.s3-website.eu-central-1.amazonaws.com/plugins/telemetry.html
+# on how to grab data.
+
+# For information on how to send commands, go to action http://mavsdk-python-docs.s3-website.eu-central-1.amazonaws.com/plugins/action.html#mavsdk.action.Action.set_actuator
+
 import asyncio
 from mavsdk import System
 from mavsdk.offboard import OffboardError
