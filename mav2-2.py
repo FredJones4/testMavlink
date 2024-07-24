@@ -47,41 +47,43 @@ async def request_telemetry_data(drone):
     while True:
         print("Requesting telemetry data...")
         
-        # Retrieve and print position data
-        position = await drone.telemetry.position()
-        print(f"Position: {position.latitude_deg}, {position.longitude_deg}, {position.absolute_altitude_m}")
+        # Continuously retrieve and print position data
+        async for position in drone.telemetry.position():
+            print(f"Position: {position.latitude_deg}, {position.longitude_deg}, {position.absolute_altitude_m}")
+            await asyncio.sleep(1)
 
-        # Retrieve and print attitude data
-        attitude = await drone.telemetry.attitude_euler()
-        print(f"Attitude: roll {attitude.roll_deg}, pitch {attitude.pitch_deg}, yaw {attitude.yaw_deg}")
+        # Continuously retrieve and print attitude data
+        async for attitude in drone.telemetry.attitude_euler():
+            print(f"Attitude: roll {attitude.roll_deg}, pitch {attitude.pitch_deg}, yaw {attitude.yaw_deg}")
+            await asyncio.sleep(1)
 
-        # Retrieve and print velocity data
-        velocity = await drone.telemetry.velocity_ned()
-        print(f"Velocity NED: {velocity}")
+        # Continuously retrieve and print velocity data
+        async for velocity in drone.telemetry.velocity_ned():
+            print(f"Velocity NED: {velocity}")
+            await asyncio.sleep(1)
 
-        # Retrieve and print airspeed data
-        airspeed = await drone.telemetry.airspeed()
-        print(f"Airspeed: {airspeed.airspeed_m_s}")
+        # Continuously retrieve and print airspeed data
+        async for airspeed in drone.telemetry.airspeed():
+            print(f"Airspeed: {airspeed.airspeed_m_s}")
+            await asyncio.sleep(1)
 
-        # Retrieve and print RC status data
-        rc_status = await drone.telemetry.rc_status()
-        print(f"RC Status: {rc_status}")
-
-        await asyncio.sleep(1)  # Adjust as needed
+        # Continuously retrieve and print RC status data
+        async for rc_status in drone.telemetry.rc_status():
+            print(f"RC Status: {rc_status}")
+            await asyncio.sleep(1)
 
 async def request_accelerometer_data(drone):
     print("Requesting accelerometer data continuously...")
     while True:
         print("Requesting accelerometer data...")
         
-        # Retrieve and print raw IMU data
-        imu = await drone.telemetry.raw_imu()
-        print("Raw IMU data:")
-        print(f"Accelerometer (X, Y, Z): ({imu.accelerometer_m_s2[0]}, {imu.accelerometer_m_s2[1]}, {imu.accelerometer_m_s2[2]})")
-        print(f"Gyroscope (X, Y, Z): ({imu.gyroscope_rad_s[0]}, {imu.gyroscope_rad_s[1]}, {imu.gyroscope_rad_s[2]})")
-        print(f"Magnetometer (X, Y, Z): ({imu.magnetometer_ga[0]}, {imu.magnetometer_ga[1]}, {imu.magnetometer_ga[2]})")
-
-        await asyncio.sleep(1)  # Adjust as needed
+        # Continuously retrieve and print raw IMU data
+        async for imu in drone.telemetry.raw_imu():
+            print("Raw IMU data:")
+            print(f"Accelerometer (X, Y, Z): ({imu.accelerometer_m_s2[0]}, {imu.accelerometer_m_s2[1]}, {imu.accelerometer_m_s2[2]})")
+            print(f"Gyroscope (X, Y, Z): ({imu.gyroscope_rad_s[0]}, {imu.gyroscope_rad_s[1]}, {imu.gyroscope_rad_s[2]})")
+            print(f"Magnetometer (X, Y, Z): ({imu.magnetometer_ga[0]}, {imu.magnetometer_ga[1]}, {imu.magnetometer_ga[2]})")
+            await asyncio.sleep(1)  # Adjust as needed
 
 async def run():
     drone = System()
