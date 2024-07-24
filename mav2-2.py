@@ -1,6 +1,6 @@
 import asyncio
 from mavsdk import System
-from mavsdk.offboard import OffboardError
+from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup
 
 async def send_commands(drone):
     throttle = 0.0
@@ -14,15 +14,25 @@ async def send_commands(drone):
         try:
             print(f"Sending throttle: {throttle}, roll: {roll}, pitch: {pitch}, yaw: {yaw}")
 
-            # Set the actuator values one by one
-            await drone.action.set_actuator(1, throttle)  # Channel 1, RC_MAP_THROTTLE
-            await drone.action.set_actuator(2, roll)      # Channel 2, RC_MAP_ROLL
-            await drone.action.set_actuator(3, pitch)     # Channel 3, RC_MAP_PITCH
-            await drone.action.set_actuator(4, yaw)       # Channel 4, RC_MAP_YAW
-            await drone.action.set_actuator(5, 0.0)       # Channel 5 -- auxiliary
-            await drone.action.set_actuator(6, 0.0)       # Channel 6 -- auxiliary, RC_MAP_FLTMODE
-            await drone.action.set_actuator(7, 1.0)       # Channel 7 -- auxiliary, RC_MAP_OFFB_SW
-            await drone.action.set_actuator(8, 0.0)       # Channel 8 -- auxiliary
+            # Set the actuator values using offboard mode
+            await drone.offboard.set_actuator_control(
+                ActuatorControl(
+                    [
+                        ActuatorControlGroup(
+                            [
+                                throttle,  # Channel 1, RC_MAP_THROTTLE
+                                roll,      # Channel 2, RC_MAP_ROLL
+                                pitch,     # Channel 3, RC_MAP_PITCH
+                                yaw,       # Channel 4, RC_MAP_YAW
+                                0.0,       # Channel 5 -- auxiliary
+                                0.0,       # Channel 6 -- auxiliary, RC_MAP_FLTMODE
+                                1.0,       # Channel 7 -- auxiliary, RC_MAP_OFFB_SW
+                                0.0        # Channel 8 -- auxiliary
+                            ]
+                        )
+                    ]
+                )
+            )
 
             roll += increment
             throttle += increment
@@ -30,9 +40,9 @@ async def send_commands(drone):
             yaw += increment
 
             if roll > 1.0 or throttle > 1.0:
-                increment = 0  # Modify increment to 0 to stop changing values
+                increment = 0  # Stop changing values
             elif roll < 0.0 or throttle < 0.0:
-                increment = 0  # Modify increment to 0 to stop changing values
+                increment = 0  # Stop changing values
 
             await asyncio.sleep(1)  # Adjust as needed
         except OffboardError as error:
