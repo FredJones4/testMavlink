@@ -9,7 +9,8 @@ async def send_proof_of_life(drone):
 	while True:
 		print("Sending proof of life signal")
 		# Replace this with an actual "proof of life" command if available
-		await drone.offboard.set_actuator_control(ActuatorControl([0] * 8))
+		await drone.offboard.set_actuator_control(ActuatorControl(
+			ActuatorControlGroup([0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0])))
 		await asyncio.sleep(1 / PROOF_OF_LIFE_HZ)
 
 async def request_sensor_data(drone):
@@ -18,12 +19,12 @@ async def request_sensor_data(drone):
 		await asyncio.sleep(1)  # Adjust as needed
 
 async def send_commands(drone):
-	throttle = 1
-	roll = -1
-	pitch = 1
-	yaw = -1
+	throttle = 0.0
+	roll = -1.0
+	pitch = 1.0
+	yaw = -1.0
 
-	increment = 0 # was 0.1
+	increment =  0.1
 	
 	while True:
 		try:
@@ -43,14 +44,14 @@ async def send_commands(drone):
                             0.0        # Channel 8 -- auxiliary
                         ]),
                                                 
-                    ActuatorControlGroup([0,0,0,0,0,0,0,0])]))
+                    ActuatorControlGroup([0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0])]))
 			
 			roll += increment
 			throttle += increment
 			pitch += increment
 			yaw += increment
 			
-			if roll > 1 or throttle > 1: # was 1.0 #TODO: modify for testing individual channels
+			if roll > 1.0 or throttle > 1.0: # was 1.0 #TODO: modify for testing individual channels
 				increment = 0#-0.1
 			elif roll < 0.0 or throttle < 0.0:
 				increment = 0#0.1
