@@ -32,7 +32,8 @@ async def send_commands(drone):
 			print(f"Sending throttle: {throttle}, roll: {roll}, pitch: {pitch}, yaw: {yaw}")
 			await drone.offboard.set_actuator_control(
                 ActuatorControl(
-                    [ActuatorControlGroup(
+                    # [
+						ActuatorControlGroup(
                         [
                             throttle,  # Channel 1, RC_MAP_THROTTLE
                             roll,      # Channel 2, RC_MAP_ROLL
@@ -42,9 +43,12 @@ async def send_commands(drone):
                             0.0,       # Channel 6 -- auxiliary, RC_MAP_FLTMODE
                             1.0,       # Channel 7 -- auxiliary, RC_MAP_OFFB_SW
                             0.0        # Channel 8 -- auxiliary
-                        ]),
+                        ])
+					# 	,
                                                 
-                    ActuatorControlGroup([0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0])]))
+                    # ActuatorControlGroup([0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0])]
+					)
+				)
 			
 			roll += increment
 			throttle += increment
