@@ -2,8 +2,9 @@ import asyncio
 from mavsdk import System
 from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup, PositionNedYaw
 
-# Define the rate at which the functions will run (200 Hz)
-RATE_HZ = 200
+# Constants
+TELEMETRY_RATE_HZ = 200
+HEARTBEAT_RATE_HZ = 2.5
 
 async def send_commands(drone):
     throttle = 0.0
@@ -17,7 +18,7 @@ async def send_commands(drone):
         try:
             print(f"Sending throttle: {throttle}, roll: {roll}, pitch: {pitch}, yaw: {yaw}")
 
-            # Set the actuator values using offboard mode
+            # Set the actuator values using offboard control
             await drone.offboard.set_actuator_control(
                 ActuatorControl(
                     [
@@ -43,11 +44,11 @@ async def send_commands(drone):
             yaw += increment
 
             if roll > 1.0 or throttle > 1.0:
-                increment = 0  # Stop changing values
+                increment = 0  # Modify increment to 0 to stop changing values
             elif roll < 0.0 or throttle < 0.0:
-                increment = 0  # Stop changing values
+                increment = 0  # Modify increment to 0 to stop changing values
 
-            await asyncio.sleep(1 / RATE_HZ)  # Run at 200 Hz
+            await asyncio.sleep(1 / TELEMETRY_RATE_HZ)  # Adjust as needed
         except OffboardError as error:
             print(f"OffboardError: {error}")
             await asyncio.sleep(1)  # Wait before retrying
@@ -55,52 +56,53 @@ async def send_commands(drone):
             print(f"Unexpected error: {e}")
             await asyncio.sleep(1)
 
-async def request_telemetry_data(drone):
-    print("Requesting sensor data continuously...")
-    while True:
-        print("Requesting telemetry data...")
+async def request_telemetry_and_accelerometer_data(drone):
+    print("Requesting telemetry and accelerometer data continuously...")
 
-        # Continuously retrieve and print position data
+    while True:
+        print("Requesting telemetry and accelerometer data...")
+
+        # Retrieve and print position data
         async for position in drone.telemetry.position():
             print(f"Position: {position.latitude_deg}, {position.longitude_deg}, {position.absolute_altitude_m}")
-            break
+            await asyncio.sleep(1 / TELEMETRY_RATE_HZ)
 
-        # Continuously retrieve and print attitude data
+        # Retrieve and print attitude data
         async for attitude in drone.telemetry.attitude_euler():
             print(f"Attitude: roll {attitude.roll_deg}, pitch {attitude.pitch_deg}, yaw {attitude.yaw_deg}")
-            break
+            await asyncio.sleep(1 / TELEMETRY_RATE_HZ)
 
-        # Continuously retrieve and print velocity data
+        # Retrieve and print velocity data
         async for velocity in drone.telemetry.velocity_ned():
             print(f"Velocity NED: {velocity}")
-            break
+            await asyncio.sleep(1 / TELEMETRY_RATE_HZ)
 
-        # Continuously retrieve and print airspeed data
+        # Retrieve and print airspeed data
         async for airspeed in drone.telemetry.airspeed():
             print(f"Airspeed: {airspeed.airspeed_m_s}")
-            break
+            await asyncio.sleep(1 / TELEMETRY_RATE_HZ)
 
-        # Continuously retrieve and print RC status data
+        # Retrieve and print RC status data
         async for rc_status in drone.telemetry.rc_status():
             print(f"RC Status: {rc_status}")
-            break
+            await asyncio.sleep(1 / TELEMETRY_RATE_HZ)
 
-        print("Requesting accelerometer data...")
-
-        # Continuously retrieve and print raw IMU data
+        # Retrieve and print raw IMU data
         async for imu in drone.telemetry.raw_imu():
             print("Raw IMU data:")
             print(f"Accelerometer (X, Y, Z): ({imu.accelerometer_m_s2[0]}, {imu.accelerometer_m_s2[1]}, {imu.accelerometer_m_s2[2]})")
             print(f"Gyroscope (X, Y, Z): ({imu.gyroscope_rad_s[0]}, {imu.gyroscope_rad_s[1]}, {imu.gyroscope_rad_s[2]})")
             print(f"Magnetometer (X, Y, Z): ({imu.magnetometer_ga[0]}, {imu.magnetometer_ga[1]}, {imu.magnetometer_ga[2]})")
-            break
+            await asyncio.sleep(1 / TELEMETRY_RATE_HZ)
 
-        await asyncio.sleep(1 / RATE_HZ)  # Run at 200 Hz
-
-async def request_health_data(drone):
-    async for health in drone.telemetry.health():
-        print(f"Health: {health}")
-        await asyncio.sleep(1)  # Adjust as needed
+async def heartbeat(drone):
+    while True:
+        print("Sending heartbeat...")
+        async for state in drone.core.connection_state():
+            if state.is_connected:
+                print("Drone is still connected!")
+                break
+        await asyncio.sleep(1 / HEARTBEAT_RATE_HZ)
 
 async def run():
     drone = System()
@@ -112,14 +114,8 @@ async def run():
         if state.is_connected:
             print("Drone connected!")
             break
+
     asyncio.sleep(1)
-    # print("Waiting for drone to have a global position estimate...")
-    # async for health in drone.telemetry.health():
-    #     if health.is_global_position_ok and health.is_home_position_ok:
-    #         print("-- Global position estimate OK")
-    #         break
-    
-    
 
     print("-- Arming")
     await drone.action.arm()
@@ -136,20 +132,17 @@ async def run():
         print("-- Disarming")
         await drone.action.disarm()
         return
-    
-    print("-- Go 0m North, 0m East, -5m Down \
-            within local coordinate system")
-    await drone.offboard.set_position_ned(
-            PositionNedYaw(0.0, 0.0, -5.0, 0.0))
+
+    print("-- Go 0m North, 0m East, -5m Down within local coordinate system")
+    await drone.offboard.set_position_ned(PositionNedYaw(0.0, 0.0, -5.0, 0.0))
     await asyncio.sleep(10)
 
     print("Starting tasks...")
     thrust_task = asyncio.ensure_future(send_commands(drone))
-    health_task = asyncio.ensure_future(request_health_data(drone))
-    telemetry_task = asyncio.ensure_future(request_telemetry_data(drone))
-    await asyncio.gather(thrust_task, health_task, telemetry_task)
+    telemetry_task = asyncio.ensure_future(request_telemetry_and_accelerometer_data(drone))
+    heartbeat_task = asyncio.ensure_future(heartbeat(drone))
 
-    
+    await asyncio.gather(thrust_task, telemetry_task, heartbeat_task)
 
 if __name__ == "__main__":
     asyncio.run(run())
