@@ -1,6 +1,6 @@
 import asyncio
 from mavsdk import System
-from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup, PositionNedYaw, 
+from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup, PositionNedYaw
 
 # Define the rate at which the functions will run (200 Hz)
 RATE_HZ = 200
