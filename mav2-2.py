@@ -3,8 +3,8 @@ from mavsdk import System
 from mavsdk.offboard import OffboardError, ActuatorControl, ActuatorControlGroup, PositionNedYaw
 
 # Constants
-TELEMETRY_RATE_HZ = 200
-HEARTBEAT_RATE_HZ = 2.5
+TELEMETRY_RATE_HZ = 150
+HEARTBEAT_RATE_HZ = 5
 
 async def send_commands(drone):
     throttle = 0.0
