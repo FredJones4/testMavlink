@@ -43,27 +43,33 @@ async def send_commands(drone):
             await asyncio.sleep(1)
 
 async def request_telemetry_data(drone):
+    print("Requesting telemetry data...")
     async for position in drone.telemetry.position():
         print(f"Position: {position.latitude_deg}, {position.longitude_deg}, {position.absolute_altitude_m}")
         await asyncio.sleep(1)
 
+    print("Requesting attitude data...")
     async for attitude in drone.telemetry.attitude_euler():
         print(f"Attitude: roll {attitude.roll_deg}, pitch {attitude.pitch_deg}, yaw {attitude.yaw_deg}")
         await asyncio.sleep(1)
 
+    print("Requesting velocity data...")
     async for velocity in drone.telemetry.velocity_ned():
         print(f"Velocity NED: {velocity}")
         await asyncio.sleep(1)
 
+    print("Requesting airspeed data...")
     async for airspeed in drone.telemetry.airspeed():
         print(f"Airspeed: {airspeed.airspeed_m_s}")
         await asyncio.sleep(1)
 
+    print("Requesting RC status data...")
     async for rc_status in drone.telemetry.rc_status():
         print(f"RC Status: {rc_status}")
         await asyncio.sleep(1)
 
 async def request_accelerometer_data(drone):
+    print("Requesting accelerometer data...")
     async for imu in drone.telemetry.raw_imu():
         print("Raw IMU data attributes:")
         print(dir(imu))  # Print available attributes of the raw IMU object
