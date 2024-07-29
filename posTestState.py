@@ -3,6 +3,9 @@ from mavsdk import System
 from mavsdk.offboard import OffboardError, PositionNedYaw
 import json
 
+LOCAL_HOST_TEST = "udp://:14540"
+CURR_USB_CONNECTION = ""
+
 def print_pretty_dict(d, indent=4):
     """
     Prints the contents of a dictionary (and nested dictionaries) in a pretty format.
@@ -122,17 +125,18 @@ async def collect_telemetry_data(drone):
 
     return data
 
-async def setup_mavlink_offboard(drone):
+async def setup_mavlink_offboard(drone, curr_conn=LOCAL_HOST_TEST):
     """
     Abstracts away the setup of the MAVSDK MAVLink protocols.
 
     Parameters:
     drone (System()): The drone setup.
+    curr_con(string): determines how mavlink is connected. Defaults to local host 14450.
 
     Returns:
     True / False (bool): Determine if setup was successful or not.
     """
-    await drone.connect(system_address="udp://:14540")
+    await drone.connect(system_address=curr_conn)
 
     print("Waiting for drone to connect...")
     async for state in drone.core.connection_state():
