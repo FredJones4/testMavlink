@@ -1,4 +1,11 @@
 '''
+How to use:
+1. cd PX4-Autopilot
+2. make px4_sitl jmavsim
+3. in a new terminal or in VSCode, start this script.
+'''
+
+'''
 Available telemetry methods:
 _extract_result
 _init_plugin
