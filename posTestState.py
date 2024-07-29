@@ -123,6 +123,15 @@ async def collect_telemetry_data(drone):
     return data
 
 async def setup_mavlink_offboard(drone):
+    """
+    Abstracts away the setup of the MAVSDK MAVLink protocols.
+
+    Parameters:
+    drone (System()): The drone setup.
+
+    Returns:
+    True / False (bool): Determine if setup was successful or not.
+    """
     await drone.connect(system_address="udp://:14540")
 
     print("Waiting for drone to connect...")
