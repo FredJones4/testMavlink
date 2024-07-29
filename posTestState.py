@@ -23,6 +23,14 @@ def print_pretty_dict(d, indent=4):
     print_dict(d)
 
 async def collect_telemetry_data(drone):
+    """
+    Produces the parameters needed for control data to calulculate angle of attack, the sideslip angle, and the state as a whole.
+    Parameters:
+    drone(Sytem()): The MAV being flown.
+    
+    Returns:
+    data (dict): the dictionary of all received state data, plus some helpful debugger information about RC, etc.
+    """
     data = {}
 
     async def request_rc_status(drone):
@@ -43,7 +51,7 @@ async def collect_telemetry_data(drone):
 
     async def request_raw_imu(drone):
         data['raw_imu_temp'] = {
-            'acceleration_frd': 0, #TODO: debug why this won't work in sitl. Consider changing for HITL.
+            'acceleration_frd': 0, # TODO: get raw_imu data to actually work in simulation.
             'gyroscope_frd': 0,
             'magnetometer_frd': 0
         }
@@ -114,10 +122,7 @@ async def collect_telemetry_data(drone):
 
     return data
 
-# Example usage
-async def run():
-    """Does Offboard control using position NED coordinates."""
-    drone = System()
+async def setup_mavlink_offboard(drone):
     await drone.connect(system_address="udp://:14540")
 
     print("Waiting for drone to connect...")
@@ -145,6 +150,16 @@ async def run():
         print(f"Starting offboard mode failed with error code: {error._result.result}")
         print("-- Disarming")
         await drone.action.disarm()
+        return False
+
+    return True
+
+# Example usage
+async def run():
+    """Does Offboard control using position NED coordinates."""
+    drone = System()
+    
+    if not await setup_mavlink_offboard(drone):
         return
 
     print("-- Go 0m North, 0m East, -5m Down within local coordinate system")
