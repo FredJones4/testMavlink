@@ -4,6 +4,8 @@ def angleOfAttack_and_slipRate(u, v, w, u_w, v_w, w_w):
     """
     Calculate angle of attack (alpha) and sideslip angle (beta).
 
+    NOTE: in the receive_data controls setup, the airspeed is given directly, head-on. A review will be needed on how to convert Va to u_w, v_w, and w_w properly.
+
     Parameters:
     u (float): Forward velocity component.
     v (float): Lateral velocity component.
