@@ -65,7 +65,7 @@ async def run():
 
     # Test Pitch control
     print("-- Testing Pitch control")
-    pitch_control = ActuatorControlGroup(controls=[0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+    pitch_control = ActuatorControlGroup(controls=[0.0, 1.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0])
     await set_and_wait(ActuatorControl(groups=[pitch_control]))
     print("position control")
     # Reset to initial setpoint
@@ -75,7 +75,7 @@ async def run():
 
     # Test Roll control
     print("-- Testing Roll control")
-    roll_control = ActuatorControlGroup(controls=[1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+    roll_control = ActuatorControlGroup(controls=[1.0, 0.0, 0.0, 0.5, 0.0, 0.0, 0.0, 0.0])
     await set_and_wait(ActuatorControl(groups=[roll_control]))
 
     # Reset to initial setpoint
@@ -87,7 +87,7 @@ async def run():
 
     # Test Yaw control
     print("-- Testing Yaw control")
-    yaw_control = ActuatorControlGroup(controls=[0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+    yaw_control = ActuatorControlGroup(controls=[0.0, 0.0, 1.0, 0.5, 0.0, 0.0, 0.0, 0.0])
     await set_and_wait(ActuatorControl(groups=[yaw_control]))
 
     # Reset to initial setpoint

@@ -100,12 +100,12 @@ def print_pretty_dict(d, indent=4):
 
 async def collect_telemetry_data(drone):
     """
-    Produces the parameters needed for control data to calulculate angle of attack, the sideslip angle, and the state as a whole.
+    Produces the parameters needed for control data to calculate angle of attack, the sideslip angle, and the state as a whole.
     Parameters:
-    drone(Sytem()): The MAV being flown.
+    drone(System): The MAV being flown.
     
     Returns:
-    data (dict): the dictionary of all received state data, plus some helpful debugger information about RC, etc.
+    data (dict): The dictionary of all received state data, plus some helpful debugger information about RC, etc.
     """
     data = {}
 
@@ -186,6 +186,18 @@ async def collect_telemetry_data(drone):
         except AttributeError:
             data['position_error'] = "Position method not available."
 
+    async def request_velocity_ned(drone):
+        try:
+            async for velocity in drone.telemetry.velocity_ned():
+                data['velocity_ned'] = {
+                    'north_m_s': velocity.north_m_s,
+                    'east_m_s': velocity.east_m_s,
+                    'down_m_s': velocity.down_m_s
+                }
+                break  # Exit after first result
+        except AttributeError:
+            data['velocity_ned_error'] = "Velocity NED method not available."
+
     # Run all the requests concurrently
     await asyncio.gather(
         request_rc_status(drone),
@@ -193,10 +205,12 @@ async def collect_telemetry_data(drone):
         request_euler_angles(drone),
         request_angular_velocity(drone),
         request_airspeed(drone),
-        request_position(drone)
+        request_position(drone),
+        request_velocity_ned(drone)
     )
 
     return data
+
 
 async def setup_mavlink_offboard(drone, curr_conn=LOCAL_HOST_TEST):
     """
