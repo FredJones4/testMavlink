@@ -22,9 +22,7 @@ void print_pretty_map(const std::map<std::string, std::string>& data, int indent
 void calculate_velocity_body(const Telemetry::VelocityNed& velocity_ned,
                               const Telemetry::EulerAngle& euler_angle,
                               Telemetry::VelocityBody& velocity_body) {
-    // Assuming R is a matrix or similar transformation from NED to body frame
-    // Assuming R is defined and populated correctly
-    // Also assuming velocity_ned_arr is an array with velocity_ned components
+    // Placeholder for transformation matrix R; should be defined based on your system
     double R[3][3] = { /* populate with appropriate values */ };
     double velocity_ned_arr[3] = { velocity_ned.north_m_s, velocity_ned.east_m_s, velocity_ned.down_m_s };
     
@@ -46,16 +44,19 @@ void collect_telemetry_data(Telemetry& telemetry) {
     data["odometry_velocity_body_x_m_s"] = std::to_string(odometry.velocity_body().x_m_s);
     data["odometry_velocity_body_y_m_s"] = std::to_string(odometry.velocity_body().y_m_s);
     data["odometry_velocity_body_z_m_s"] = std::to_string(odometry.velocity_body().z_m_s);
-    data["imu_acceleration_frd_x"] = std::to_string(imu.acceleration_frd().x);
-    data["imu_acceleration_frd_y"] = std::to_string(imu.acceleration_frd().y);
-    data["imu_acceleration_frd_z"] = std::to_string(imu.acceleration_frd().z);
+    
+    // Updated imu acceleration fields
+    data["imu_acceleration_forward_m_s2"] = std::to_string(imu.acceleration_frd().forward_m_s2);
+    data["imu_acceleration_right_m_s2"] = std::to_string(imu.acceleration_frd().right_m_s2);
+    data["imu_acceleration_down_m_s2"] = std::to_string(imu.acceleration_frd().down_m_s2);
     
     print_pretty_map(data);
 }
 
 int main() {
     Mavsdk mavsdk;  // Ensure this is initialized correctly
-    System& system = mavsdk.systems().at(0);  // Assuming you have at least one system
+    mavsdk.add_any_system();  // Assuming you have a method to add a system
+    auto system = mavsdk.systems().at(0);  // Assuming you have at least one system
     
     auto action = Action(system);
     auto offboard = Offboard(system);
