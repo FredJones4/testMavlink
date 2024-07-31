@@ -38,6 +38,7 @@ import json
 
 LOCAL_HOST_TEST = "udp://:14540"
 CURR_USB_CONNECTION = "/dev/ttyACM1"
+LIKELY_USB_PI_CONNECTION = "/dev/ttyUSB0"
 ####################################################################################################################################
 def print_pretty_dict(d, indent=4):
     """
