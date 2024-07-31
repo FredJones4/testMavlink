@@ -18,7 +18,16 @@ note: we are testing. It may be necessary to have 2 copies of the same control g
  Set an input boolean where, if false, 1 control group is used. if not, then 2 contorl groups, as seen in documentation.
 
 
-Note the script in context:
+Note the script in context.
+
+In PX4 v1.9.0 Only first four Control Groups are supported
+     (https://github.com/PX4/Firmware/blob/v1.9.0/src/modules/mavlink/mavlink_receiver.cpp#L980)
+
+This is confusing, since only 2 control groups can be used anyway. What does it mean?
+
+This site may have the answer:
+
+https://jalpanchal1.gitbooks.io/px4-developer-guide/content/en/concept/mixing.html
 
 """
 ##################################################################################################################################
