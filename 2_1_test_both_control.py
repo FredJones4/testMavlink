@@ -108,7 +108,7 @@ async def set_actuator_control_homemade(drone, elevator, aileron, rudder, starbo
         await drone.offboard.set_actuator_control(ActuatorControl(groups=[control_group1, control_group2]))
     except OffboardError as e:
         print(f"Setting actuator control failed with error: {e}")
-    await asyncio.sleep(0.1)
+    # await asyncio.sleep(0.1)
 #######################################################################################################################
 
 async def setup_mavlink_offboard(drone, curr_conn=LOCAL_HOST_TEST):
