@@ -1,9 +1,17 @@
+"""
+README
+
+To run this test code:
+
+1. Run JMAVSim from the px4 library (make px4_sitl_default jmavsim from the PX4-Autopilot directory)
+2. Run this script
+"""
 import asyncio
 from mavsdk import System
 from mavsdk.offboard import OffboardError, PositionNedYaw
 import numpy as np
 
-# Import your DroneController class here
+
 from DroneController import DroneController  # Replace 'your_module' with the actual module name
 
 # Test the DroneController class

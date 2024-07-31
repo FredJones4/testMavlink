@@ -1,24 +1,4 @@
 """
-write a function that sets actuator control given the following variable inputs, setting variables that go outside 
-of bounds to the closer limit (ex -1.1 to -1, 1.2 to 1)
-
-Position 1 is Elevator [-1,1]
-2 is alieron [-1,1]
-3 is rudder [-1,1]
-4 is motor 3 front motor [0,1]
-5 is motor 2 rear motor [0,1]
-6 is motor 4 starboard rear motor [0,1]
-7 is motor 1 starboard front motor [0,1]
-8 is motor 5 forward propulsion motor [0,1]
-
-input_control = ActuatorControlGroup(controls=[Elevator,alieron,rudder, front motor, rear motor,
- starboard rear motor, starboard front motor, forward propulsion motor])
-
-note: we are testing. It may be necessary to have 2 copies of the same control group input in setting acutator control.
- Set an input boolean where, if false, 1 control group is used. if not, then 2 contorl groups, as seen in documentation.
-
-
-Note the script in context.
 
 In PX4 v1.9.0 Only first four Control Groups are supported
      (https://github.com/PX4/Firmware/blob/v1.9.0/src/modules/mavlink/mavlink_receiver.cpp#L980)
