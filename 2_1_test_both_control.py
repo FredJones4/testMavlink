@@ -158,7 +158,7 @@ async def test_set_actuator_control():
     await asyncio.sleep(10)
     # Test case 1: Normal input
     print("Test case 1: Normal input")
-    await set_actuator_control_test(drone, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5)
+    await set_actuator_control_test(drone, 1, 0, 0, 0, 0, 0, 0, 0)
     await asyncio.sleep(10)
     print("-- Go 5m North, 10m East, -5m Down within local coordinate system")
     await drone.offboard.set_position_ned(PositionNedYaw(5.0, 10.0, -5.0, 90.0))
