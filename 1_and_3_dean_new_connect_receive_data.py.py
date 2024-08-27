@@ -482,7 +482,7 @@ async def run():
         await drone.offboard.stop()
     except OffboardError as error:
         print(f"Stopping offboard mode failed with error code: {error._result.result}")
-
+    
     data = await collect_telemetry_data(drone)
     print("Collected telemetry data:")
     print_pretty_dict(data)
